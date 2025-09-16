@@ -9,10 +9,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { Loader2, PauseCircleIcon, Volume2, VolumeX } from "lucide-react";
+import { ArrowLeft, Loader2, PauseCircleIcon, Volume2, VolumeX } from "lucide-react";
 import Logo from "@/components/logo/Logo";
 const MountainEscape = () => {
-  const { push } = useRouter();
+  const { push, back } = useRouter();
   const images = [scene1, scene2, scene3];
     const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -42,18 +42,14 @@ const MountainEscape = () => {
       <div className="grid grid-cols-12 h-[100vh]">
         <div className="col-span-5 h-full relative overflow-hidden">
           <div className="w-full h-full flex flex-col p-7 dark:text-white z-[1000] text-white  bg-[#000000a2] absolute top-0 left-0">
-            <div>
-             <div> <p className="uppercase text-right text-sm">[ project 1 ]</p></div>
-              <VolumeX className="w-10 h-10 cursor-pointer" />
-            </div>
+                          <div> <p className="uppercase text-right text-sm flex justify-between items-center"> <ArrowLeft onClick={()=>back()} className="cursor-pointer"/>[ project 1 ]</p></div>
             <h1 className="text-[60px] uppercase font-[500] tracking-tighter pt-[100px]">
               Table of kings
             </h1>
             <div>
               <div className="mt-48">
-                <p className="text-start text-sm">
-                  Available on:
-                  <br /> Instagram
+                 <p className="text-start text-sm tracking-tighter cursor-pointer">
+                 [ SOUND OFF ]
                 </p>
               </div>
               <div className="flex text-sora text-xs items-center mt-4  uppercase justify-between">
