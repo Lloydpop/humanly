@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Creative Studio Agency",
 };
 
-export const ppneue = localFont({
+const ppneue = localFont({
   src: [
     { path: "../fonts/ppneue/ppneuemontreal-thin.otf", weight: "100", style: "normal" },
     { path: "../fonts/ppneue/ppneuemontreal-book.otf", weight: "400", style: "normal" },
